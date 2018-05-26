@@ -1,0 +1,57 @@
+.form {
+
+    &__input {
+        border: 1px solid #71787D;
+        border-radius: 2px;
+        background-color: #4D687E;
+        font-size: 12px;
+        width: 100%;
+        height: 30px;
+        line-height: 20px;
+        color: #000000;
+        outline: none;
+        font-family: 'Open Sans';
+
+        &__parent {
+            width: 100%;
+        }
+
+        &:focus {
+            box-shadow: 1px 2px 10px #000000 inset;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #1D1E1F;
+            font-size: 12px;
+        }
+
+        &__errorSpan {
+            color: #FFFFFF;
+            font-size: 12px;
+            border-bottom: 1px solid red;
+            border-radius: 3px;
+            padding: 0 6px 0 6px;
+
+            &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 6px solid red;
+                position: absolute;
+            }
+        }
+
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px #FFFFFF inset;
+        }
+    }
+
+    &__text-input {
+
+        .MuiInput-input-23 {
+            margin: 5px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.button {
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin-bottom: 0;
+    min-width: 110px;
+    overflow-x: hidden;
+    padding: 10px 28px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #FFFFFF;
+    font-family: 'Open Sans';
+    //border-color: #CCCCCC;
+
+    &:hover {
+        background-color: #E6E6E6;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    &[disabled] {
+        box-shadow: none;
+        cursor: not-allowed;
+        opacity: .65;
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--primary {
+        @include button-constructor($btn-primary-color, $btn-primary-bg);
+    }
+
+    &--info {
+        @include button-constructor($btn-info-color, $btn-info-bg);
+    }
+
+    &--success {
+        @include button-constructor($btn-success-color, $btn-success-bg);
+    }
+
+    &--warning {
+        @include button-constructor($btn-warning-color, $btn-warning-bg);
+    }
+
+    &--danger {
+        @include button-constructor($btn-danger-color, $btn-danger-bg);
+    }
+
+    &--gray {
+        @include button-constructor($btn-gray-color, $btn-gray-bg);
+    }
+
+    &--small {
+        min-width: 80px;
+        padding: 5px 10px;
+    }
+
+    &--xsmall {
+        min-width: 40px;
+        padding: 5px 10px;
+    }
+}

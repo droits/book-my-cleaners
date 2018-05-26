@@ -1,0 +1,44 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--xmini {
+        height: 12px;
+        width: 12px;
+    }
+
+    &--mini {
+        height: 16px;
+        width: 16px;
+    }
+
+    &--small {
+        height: 32px;
+        width: 32px;
+    }
+
+    &--medium {
+        height: 64px;
+        width: 64px;
+    }
+
+    &--large {
+        height: 128px;
+        width: 128px;
+    }
+
+    &--xlarge {
+        height: 256px;
+        width: 256px;
+    }
+
+    &--xxlarge {
+        height: 512px;
+        width: 512px;
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: .3;
+    }
+}

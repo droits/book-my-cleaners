@@ -1,0 +1,24 @@
+@mixin button-constructor($color, $background) {
+    $dark-background: darken($background, 5%);
+    $light-background: lighten($background, 10%);
+
+    background-color: $background;
+    border-color: $background;
+    color: $color;
+
+    &:hover {
+        background-color: $light-background;
+        border-color: $light-background;
+        color: $color;
+    }
+
+    &:active {
+        background-color: $dark-background;
+        border-color: $dark-background;
+        color: $color;
+    }
+
+    &:focus {
+        color: $color;
+    }
+}
