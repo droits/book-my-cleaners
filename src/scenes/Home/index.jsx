@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import BEM from 'components/utils/bem';
+import FontIcon from 'components/FontIcon';
 import './style.scss';
 
 export default class Home extends Component {

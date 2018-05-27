@@ -5,6 +5,7 @@ import _map from 'lodash/map';
 import TextInput from 'components/Form/components/TextInput';
 import Form from 'components/Form';
 import BEM from 'components/utils/bem';
+import FontIcon from 'components/FontIcon';
 
 import './style.scss';
 
@@ -12,13 +13,16 @@ class BookNow extends Component {
     render() {
         const items = [
             {
-                name: 'iron'
+                name: 'iron',
+                icon: 'user'
             },
             {
-                name: 'clean'
+                name: 'clean',
+                icon: 'home'
             },
             {
-                name: 'cloth'
+                name: 'cloth',
+                icon: 'power-bi'
             }
         ];
         const b = BEM('book-now');
@@ -41,16 +45,23 @@ class BookNow extends Component {
                     component={TextInput}
                 />
                 <div className={b('container').mix('row text-center').toString()}>
-                    {
-                        _map(items, item => {
-                            return (
-                                <Fragment key={item.name}>
-                                    <input type='checkbox' id={item.name} />
-                                    <label htmlFor={item.name}>{item.name}</label>
-                                </Fragment>
-                            )
-                        })
-                    }
+                    <div className={b('child').mix('col-lg-12').toString()}>
+                        {
+                            _map(items, item => {
+                                return (
+                                    <Fragment key={item.name}>
+                                        <input type='checkbox' id={item.name} />
+                                        <label className={b('label').toString()} htmlFor={item.name}>
+                                            <span className={b('label')('child').toString()}>
+                                                {item.name}
+                                                <FontIcon name={item.icon} color='#939393' size={20} />
+                                            </span>                                        
+                                        </label>
+                                    </Fragment>
+                                )
+                            })
+                        }
+                    </div>                    
                 </div>                
             </Form>
         );

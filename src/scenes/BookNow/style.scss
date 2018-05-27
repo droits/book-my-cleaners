@@ -15,51 +15,49 @@
     }
 
     &__container {
+        margin: 0 !important;
         
         input {
             position: absolute;
             left: -9999px;
         }
+    }
 
-        label {
-            display: inline-block;
-            position: relative;
-            margin: 20px;
-            padding: 15px 30px 15px 62px;
-            border: 3px solid #fff;
-            border-radius: 100px;
-            color: #fff;
-            background-color: #6a8494;
-            box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-            white-space: nowrap;
-            cursor: pointer;
-            user-select: none;
-            transition: background-color .2s, box-shadow .2s;
+    &__label {
+        display: inline-block;
+        position: relative;
+        margin: 20px;
+        padding: 30px 50px 30px 50px;
+        border: 5px solid #CBCBCB;
+        border-radius: 10px;
+        color: #939393;
+        background-color: #F8F8F8;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        white-space: nowrap;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color .2s, box-shadow .2s;
+
+        &__child {
+            display: grid;
         }
 
-        label::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            width: 32px;
-            border: 3px solid #fff;
-            border-radius: 100px;
-            transition: background-color .2s;
-        }
-
-        label:hover,
-        input:focus+label {
+        &:hover,
+        input:focus+& {
             box-shadow: 0 0 20px rgba(0, 0, 0, .6);
         }
 
-        input:checked+label {
-            background-color: #ab576c;
+        input:checked+& {
+            background-color: #003D90;
+            color: white;
+            border: 5px solid #AEBDD2;
+
+            .fontIcon {
+                color: #FFFFFF !important;
+            }
         }
 
-        input:checked+label::before {
+        input:checked+&::before {
             background-color: #fff;
         }
     }
